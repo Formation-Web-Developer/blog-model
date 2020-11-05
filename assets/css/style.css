@@ -1,0 +1,261 @@
+@font-face{
+    font-family: 'Raleway Regular';
+    src: url('../font/Raleway-Regular.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway Regular';
+    background-color: rgb(231, 231, 231);
+}
+
+img{
+    width: 100%;
+}
+
+/* Header */
+
+header{
+    margin: 3rem;
+    text-align: center;
+}
+
+header p{
+    font-size: .7rem;
+    margin-top: 1.5rem;
+}
+
+header span, .card-extra span{
+    background-color: black;
+    color: white;
+    padding: .2rem .5rem;
+}
+
+/* Col */
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+
+.col-1{
+    width: 70%;
+}
+
+.col-2{
+    width: 30%;
+}
+
+/* CARDS */
+
+.card, .card-list{
+    margin: 2rem 1rem;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.4); 
+    box-shadow: 0px 0px 14px 3px rgba(0,0,0,0.4);
+}
+
+.card-misc, .card-extra, .flat-card-misc{
+    padding: .5rem;
+}
+
+.card-misc p, .flat-card-misc p{
+    font-size: .9rem;
+}
+
+.card-misc p, .card-extra{
+    margin-top: 1rem;
+}
+
+.card-misc .card-description{
+    font-size: 1.1rem;
+}
+
+.card-misc .date{
+    color: rgb(192, 192, 192);
+}
+
+.card-extra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-extra button{
+    padding: 1rem;
+    border: 1px solid rgb(192, 192, 192);
+}
+
+.card-extra button, .card-extra p{
+    font-weight: 600;
+}
+
+.card-extra span{
+    margin-left: .5rem;
+}
+
+.card-extra .circle{
+    border-radius: 90px;
+}
+
+/* CARD LIST */
+.card-header{
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: rgb(231, 231, 231);
+}
+
+.card-item{
+    border-bottom: 1px solid rgb(231, 231, 231);
+    padding: .5rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.card-items:last-child{
+    border-bottom: none;
+}
+
+.card-item img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.card-item-misc{
+    padding-left: .5rem;
+}
+
+.card-item h3{
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+.card-item p{
+    font-size: 1rem;
+}
+
+.card-tags{
+    padding: .7rem;
+}
+
+.card-tags span{
+    background-color: rgb(231, 231, 231);
+    font-size: .75rem;
+    padding: .2rem .3rem;
+    line-height: 3rem;
+}
+
+.card-tags span.active{
+    background-color: black;
+    color: white;
+    font-size: .9rem;
+    padding-top: .3rem;
+}
+
+/* FLAT-CARD */
+.flat-card{
+    display: none;
+    background-color: white;
+}
+
+/* Footer */
+footer{
+    background-color:#616161;
+    padding: 1.5rem 1rem;
+}
+
+footer button{
+    background-color: #434343;
+    color: #616161;
+    padding: .5rem 1rem;
+    border: none;
+    font-size: 1.3rem;
+}
+
+footer .active{
+    background-color: black;
+    color: white;
+}
+
+footer p {
+    color: white;
+    margin: 1.5rem 0;
+}
+
+@media screen and (max-width: 992px){
+    .m-hidden{
+        display: none;
+    }
+
+    .flat-card{
+        display: flex;
+        padding: 1rem;
+    }
+
+    .flat-card img{
+        width: 7rem;
+        border-radius: .5rem;
+        height: 5rem;
+    }
+
+    .flat-card-misc h2{
+        display: none;
+    }
+
+    main{
+        width: 100%;
+    }
+
+    .col-1, .col-2{
+        width: 100%;
+    }
+
+    .card-list{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 576px){
+    header p{
+        line-height: 1.1rem;
+    }
+
+    .flat-card{
+        display: block;
+    }
+
+    .flat-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .flat-card-misc h2{
+        display: inline-block;
+        margin-bottom: .5rem;
+    }
+
+    .card, .card-list{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .card-extra{
+        flex-direction: column;
+    }
+
+    .card-extra button{
+        width: 100%;
+    }
+
+    .card-extra p{
+        margin: .5rem 0;
+    }
+}
